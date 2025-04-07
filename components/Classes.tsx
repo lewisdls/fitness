@@ -6,7 +6,7 @@ export const Classes = async () => {
   const classes = await prisma.class.findMany();
 
   return (
-    <div className="md:pb-28 bg-neutral-50 flex flex-col items-center gap-6 md:gap-8 overflow-hidden">
+    <div className="px-4 md:pb-28 bg-neutral-50 flex flex-col items-center gap-6 md:gap-8 overflow-hidden">
       <h1 className="text-gray-950 text-4xl font-bold">
         <span className="text-yellow-500">CLASSES</span> WE PROVIDE
       </h1>

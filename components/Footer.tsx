@@ -13,7 +13,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <div>
-      <div className="bg-neutral-900 text-white grid md:grid-cols-4 gap-14 md:gap-0 justify-center text-center md:text-left w-full h-full py-20 md:p-30">
+      <div className="bg-neutral-900 text-white grid md:grid-cols-4 gap-14 md:gap-0 justify-center text-center md:text-left w-full h-full py-20 px-4 md:p-30">
         <div className="space-y-6 md:w-3/4">
           <div className="space-y-4">
             <h1 className="text-3xl font-bold">DoSantos</h1>
