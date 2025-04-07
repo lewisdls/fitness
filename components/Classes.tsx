@@ -8,7 +8,7 @@ export const Classes = async () => {
   return (
     <div className="px-4 md:pb-28 bg-neutral-50 flex flex-col items-center gap-6 md:gap-8 overflow-hidden">
       <h1 className="text-gray-950 text-4xl font-bold">
-        <span className="text-yellow-500">CLASSES</span> WE PROVIDE
+        <span className="text-yellow-500 text-center">CLASSES</span> WE PROVIDE
       </h1>
       <p className="text-center text-gray-950 leading-loose md:w-1/2">
         Best Training dolor sit consecteur adipiscing elit, send do eiusmod temp
