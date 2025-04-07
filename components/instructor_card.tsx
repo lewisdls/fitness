@@ -1,5 +1,7 @@
+"use client";
+
 import { Facebook, Instagram, Phone, Youtube } from "lucide-react";
-import React from "react";
+import { motion } from "motion/react";
 
 export interface Instructor {
   id: number;
@@ -8,9 +10,19 @@ export interface Instructor {
   image: string;
 }
 
-export const Instructor_Card = ({instructor}: {instructor: Instructor}) => {
+export const Instructor_Card = ({ instructor, index }: { instructor: Instructor, index: number }) => {
   return (
-    <div className="bg-neutral-100 rounded-b-lg w-full">
+    <motion.div
+      initial={{ opacity: 0, scale: 0 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        type: 'tween',
+        duration: 1,
+        ease: [0, 0, 0, 1],
+        delay: index * 0.1
+      }}
+      className="bg-neutral-100 rounded-b-lg w-full"
+    >
       <div className="md:w-[300px] h-[300px]">
         <img
           src={instructor.image}
@@ -38,6 +50,6 @@ export const Instructor_Card = ({instructor}: {instructor: Instructor}) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };

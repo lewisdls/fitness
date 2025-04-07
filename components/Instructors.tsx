@@ -1,4 +1,4 @@
-import { Instructor_Card } from "./instructor_card";
+import {Instructor_Card} from "./instructor_card";
 import { prisma } from "@/utils/prisma";
 
 export const Instructors = async () => {
@@ -15,8 +15,8 @@ export const Instructors = async () => {
         voluptatem ipsum saepe sit amet
       </p>
       <div className="grid md:grid-cols-4 gap-8 mt-8 w-full md:w-auto">
-        {instructors.map((i) => (
-          <Instructor_Card key={i.id} instructor={i} />
+        {instructors.map((i, index) => (
+          <Instructor_Card key={i.id} instructor={i} index={index} />
         ))}
       </div>
     </div>

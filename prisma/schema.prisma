@@ -28,3 +28,20 @@ model Instructor {
   image     String
   createdAt DateTime  @default(now())
 }
+
+model Member {
+  id        Int       @id @default(autoincrement())
+  name      String
+  email     String    @unique
+  phone     String
+  plan      Plan @relation(fields: [planId], references: [id])
+  planId    Int
+}
+
+model Plan {
+  id        Int       @id @default(autoincrement())
+  title     String
+  price     Int
+  features  String[]
+  members   Member[]
+}
