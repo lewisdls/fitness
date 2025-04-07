@@ -6,7 +6,7 @@ export const Classes = async () => {
   const classes = await prisma.class.findMany();
 
   return (
-    <div className="md:pb-28 bg-neutral-50 flex flex-col items-center gap-6 md:gap-8">
+    <div className="md:pb-28 bg-neutral-50 flex flex-col items-center gap-6 md:gap-8 overflow-hidden">
       <h1 className="text-gray-950 text-4xl font-bold">
         <span className="text-yellow-500">CLASSES</span> WE PROVIDE
       </h1>
@@ -15,7 +15,7 @@ export const Classes = async () => {
         incididunt ut labore et dolore sit consecteur adipiscing elit dolore sit
         consecteu dolore sit
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-8 md:overflow-hidden">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-8">
         {classes.map((c, index) => (
           <Class_Card key={c.id} c={c} index={index} />
         ))}
