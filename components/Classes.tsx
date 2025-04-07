@@ -1,0 +1,25 @@
+import React from "react";
+import { Class_Card } from "./class";
+import { prisma } from "@/utils/prisma";
+
+export const Classes = async () => {
+  const classes = await prisma.class.findMany();
+
+  return (
+    <div className="md:pb-28 bg-neutral-50 flex flex-col items-center gap-6">
+      <h1 className="text-gray-950 text-4xl font-bold">
+        <span className="text-yellow-500">CLASSES</span> WE PROVIDE
+      </h1>
+      <p className="text-center text-gray-950 leading-loose md:w-1/2">
+        Best Training dolor sit consecteur adipiscing elit, send do eiusmod temp
+        incididunt ut labore et dolore sit consecteur adipiscing elit dolore sit
+        consecteu dolore sit
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-8">
+        {classes.map((c) => (
+          <Class_Card key={c.id} c={c} />
+        ))}
+      </div>
+    </div>
+  );
+};
