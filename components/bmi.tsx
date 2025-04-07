@@ -10,7 +10,7 @@ export const BMI = () => {
   const bmi = weight / (height * height) || 0;
 
   return (
-    <div className="text-white bg-[url('/05.jpeg')] h-[600px] bg-cover flex flex-col text-center justify-center gap-10">
+    <div className="text-white bg-[url('/05.jpeg')] py-20 md:h-[600px] bg-cover flex flex-col text-center justify-center gap-10">
       <div className="flex flex-col items-center gap-4">
         <h1 className="text-4xl font-bold">
           BMI <span className="text-yellow-500">CALCULATOR</span>
@@ -39,11 +39,11 @@ export const BMI = () => {
       <div className="flex items-center justify-between w-full px-20">
         <button
           onClick={() => setAnswer(Number(bmi.toFixed(1)))}
-          className="bg-yellow-500 font-semibold text-lg uppercase rounded-full cursor-pointer px-12 py-4"
+          className="bg-yellow-500 font-semibold text-lg uppercase rounded-full cursor-pointer px-6 py-2 md:px-12 md:py-4"
         >
           Calculate
         </button>
-        <span className="p-8 font-bold text-4xl">
+        <span className="font-bold text-4xl">
           {answer == 0 || answer == Infinity
             ? "0.0"
             : answer < 0

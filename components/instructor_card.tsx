@@ -10,11 +10,11 @@ export interface Instructor {
 
 export const Instructor_Card = ({instructor}: {instructor: Instructor}) => {
   return (
-    <div className="bg-neutral-100 rounded-b-lg">
-      <div className="w-[300px] h-[300px]">
+    <div className="bg-neutral-100 rounded-b-lg w-full">
+      <div className="md:w-[300px] h-[300px]">
         <img
           src={instructor.image}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-top md:object-center"
           alt=""
         />
       </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 export const Header = () => {
   return (
     <div className="text-white">
-      <div className="bg-gradient-to-r from-[#121212] to-zinc-800 flex justify-around h-[calc(90vh-92px)] md:h-[calc(100vh-92px)] items-center flex-col md:flex-row gap-6 md:gap-0 md:px-8 md:py-0">
+      <div className="bg-gradient-to-r from-[#121212] to-zinc-800 flex justify-around h-[calc(90vh-92px)] md:h-[calc(100vh-92px)] items-center flex-col px-4 md:flex-row gap-6 md:gap-0 md:px-8 md:py-0">
         <div className="flex flex-col items-center justify-center md:items-start gap-8 md:w-2/6 h-full">
           <Dumbbell className="w-12 h-12" />
           <h1 className="text-6xl md:text-8xl text-center md:text-left font-bold text-yellow-500">
