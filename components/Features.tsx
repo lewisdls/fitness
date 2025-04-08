@@ -36,7 +36,7 @@ export const Features = () => {
       <div className="hidden md:flex flex-col md:flex-row justify-center gap-2 w-full">
         <div className="grid grid-cols-2 w-3/5 3xl:w-3/6 bg-gradient-to-r from-[#121212] to-zinc-800 text-white">
           <div className="flex gap-6 items-center justify-center w-fit px-14">
-            <Dumbbell className="w-6 h-6" />
+            <Dumbbell className="w-20 h-20" />
             <div className="flex flex-col">
               <h2 className="text-xl font-semibold">Best Training</h2>
               <p className="leading-loose mt-2">
@@ -46,7 +46,7 @@ export const Features = () => {
             </div>
           </div>
           <div className="flex gap-6 items-center justify-center w-fit px-14">
-            <Dumbbell className="w-6 h-6" />
+            <Dumbbell className="w-20 h-20" />
             <div className="flex flex-col">
               <h2 className="text-xl font-semibold">Best Training</h2>
               <p className="leading-loose mt-2">
@@ -56,7 +56,7 @@ export const Features = () => {
             </div>
           </div>
           <div className="flex gap-6 items-center justify-center w-fit px-14">
-            <Dumbbell className="w-6 h-6" />
+            <Dumbbell className="w-20 h-20" />
             <div className="flex flex-col">
               <h2 className="text-xl font-semibold">Best Training</h2>
               <p className="leading-loose mt-2">
@@ -66,7 +66,7 @@ export const Features = () => {
             </div>
           </div>
           <div className="flex gap-6 items-center justify-center w-fit px-14">
-            <Dumbbell className="w-6 h-6" />
+            <Dumbbell className="w-20 h-20" />
             <div className="flex flex-col">
               <h2 className="text-xl font-semibold">Best Training</h2>
               <p className="leading-loose mt-2">
