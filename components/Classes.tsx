@@ -1,9 +1,19 @@
-import React from "react";
-import { Class_Card } from "./class";
-import { prisma } from "@/utils/prisma";
+"use client";
 
-export const Classes = async () => {
-  const classes = await prisma.class.findMany();
+import { useEffect, useState } from "react";
+import { Class, Class_Card } from "./class";
+
+export const Classes = () => {
+  const [classes, setClasses] = useState<Class[]>([]);
+
+  useEffect(() => {
+    const fetchClasses = async () => {
+      const res = await fetch("/api/classes");
+      const data = await res.json();
+      setClasses(data);
+    };
+    fetchClasses();
+  }, []);
 
   return (
     <div className="px-4 md:pb-28 bg-neutral-50 flex flex-col items-center gap-6 md:gap-8 overflow-hidden">

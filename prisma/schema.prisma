@@ -25,7 +25,7 @@ model Instructor {
   id        Int       @id @default(autoincrement())
   name      String
   role      String
-  image     String
+  image     String?
   createdAt DateTime  @default(now())
 }
 
@@ -44,4 +44,12 @@ model Plan {
   price     Int
   features  String[]
   members   Member[]
+}
+
+model Product {
+  id        Int       @id @default(autoincrement())
+  title     String
+  price     Decimal
+  image     String
+  createdAt DateTime  @default(now())
 }

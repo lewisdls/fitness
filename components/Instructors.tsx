@@ -1,8 +1,19 @@
-import {Instructor_Card} from "./instructor_card";
-import { prisma } from "@/utils/prisma";
+"use client";
 
-export const Instructors = async () => {
-  const instructors = await prisma.instructor.findMany();
+import { useEffect, useState } from "react";
+import { Instructor, Instructor_Card } from "./instructor_card";
+
+export const Instructors = () => {
+  const [instructors, setInstructors] = useState<Instructor[]>([]);
+
+  useEffect(() => {
+    const fetchInstructors = async () => {
+      const res = await fetch("/api/instructors");
+      const data = await res.json();
+      setInstructors(data);
+    };
+    fetchInstructors();
+  }, []);
 
   return (
     <div className="py-20 px-4 md:px-0 bg-neutral-50 flex flex-col items-center justify-center text-center gap-8">
