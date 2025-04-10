@@ -9,8 +9,8 @@ export interface Product {
 
 export const Product_Card = ({ product }: { product: Product }) => {
   return (
-    <div className="text-center shadow rounded-md">
-      <div className="w-full md:h-[300px] relative">
+    <div className="md:w-auto text-center shadow rounded-md">
+      <div className="w-full h-[400px] md:h-[300px] relative">
         <img
           src={product.image}
           alt=""

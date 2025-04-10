@@ -30,7 +30,7 @@ export const Products = () => {
           tempor didunt ut labore et dolore m et dolore magna aliqua minim niam
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 md:px-28 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 items-center justify-center md:px-28 gap-8">
         {products.map((product) => (
           <Product_Card key={product.id} product={product} />
         ))}
