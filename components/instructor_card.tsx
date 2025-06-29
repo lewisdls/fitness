@@ -10,18 +10,24 @@ export interface Instructor {
   image: string;
 }
 
-export const Instructor_Card = ({ instructor, index }: { instructor: Instructor, index: number }) => {
+export const Instructor_Card = ({
+  instructor,
+  index,
+}: {
+  instructor: Instructor;
+  index: number;
+}) => {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{
-        type: 'tween',
+        type: "tween",
         duration: 1,
         ease: [0, 0, 0, 1],
-        delay: index * 0.1
+        delay: index * 0.1,
       }}
-      className="bg-neutral-100 rounded-b-lg w-full"
+      className="bg-neutral-100 rounded-b-lg w-[400px] md:w-full"
     >
       <div className="md:w-[300px] h-[300px]">
         <img

@@ -1,7 +1,7 @@
 import React from "react";
 
 export interface Product {
-  id: string;
+  id: number;
   title: string;
   price: number;
   image: string;

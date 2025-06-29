@@ -1,20 +1,16 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Class, Class_Card } from "./class";
 
+const classes = [
+  { id: 1, title: "Yoga Class", image: "/yoga.jpeg" },
+  { id: 2, title: "Crossfit Class", image: "/crossfit.jpeg" },
+  { id: 3, title: "Cardio Class", image: "/cardio.jpeg" },
+  { id: 4, title: "Martial Arts Class", image: "/martial_arts.jpeg" },
+  { id: 5, title: "Fitness Class", image: "/fitness.jpeg" },
+];
+
 export const Classes = () => {
-  const [classes, setClasses] = useState<Class[]>([]);
-
-  useEffect(() => {
-    const fetchClasses = async () => {
-      const res = await fetch("/api/classes");
-      const data = await res.json();
-      setClasses(data);
-    };
-    fetchClasses();
-  }, []);
-
   return (
     <div className="px-4 md:pb-28 bg-neutral-50 flex flex-col items-center gap-6 md:gap-8 overflow-hidden">
       <h1 className="text-gray-950 text-4xl font-bold text-center">
@@ -25,7 +21,7 @@ export const Classes = () => {
         incididunt ut labore et dolore sit consecteur adipiscing elit dolore sit
         consecteu dolore sit
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-20 mt-8 last:mb-10">
         {classes.map((c, index) => (
           <Class_Card key={c.id} c={c} index={index} />
         ))}

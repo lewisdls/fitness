@@ -10,7 +10,6 @@
     "postinstall": "prisma generate && prisma db push"
   },
   "dependencies": {
-    "@prisma/client": "^6.5.0",
     "lucide-react": "^0.487.0",
     "motion": "^12.6.3",
     "next": "15.2.4",
@@ -22,7 +21,6 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "prisma": "^6.5.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }

@@ -1,24 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Product, Product_Card } from "./product_card";
 
+const products = [
+  { id: 1, title: "Dumbbells", price: 29.99, image: "/dumbbell.png" },
+  { id: 2, title: "Slam Balls", price: 19.99, image: "/slam_ball.png" },
+  { id: 3, title: "Water Containers", price: 5.79, image: "/water_bottle.png" },
+  { id: 4, title: "Gym Bag", price: 10, image: "/gym_personal_bag.png" },
+];
+
 export const Products = () => {
-  const [products, setProducts] = useState<Product[]>([]);
-
-  useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const res = await fetch("/api/products");
-        const data = await res.json();
-        setProducts(data);
-      } catch (error) {
-        console.log(error);
-      }
-    };
-    fetchProducts();
-  }, []);
-
   return (
     <div className="bg-neutral-50 text-center space-y-12 pt-10 px-4 md:px-0">
       <div className="flex flex-col items-center gap-4">
